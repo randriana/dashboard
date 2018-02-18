@@ -1,0 +1,11 @@
+@import "../../sass/common";
+
+.home {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: $main-view--margin-top auto 0;
+    padding: 0 50px;
+    flex-wrap: wrap;
+  }
+}

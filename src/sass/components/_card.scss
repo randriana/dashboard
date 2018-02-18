@@ -1,0 +1,35 @@
+.card {
+  &__container {
+    background-color: #fff;
+    width: 330px;
+    height: 70px;
+    border: 1px solid $border--color;
+    padding: 30px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  &__label {
+    display: block;
+    color: $text--color;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    display: inline-block;
+    float: left;
+    font-size: 28px;
+    color: $text--color;
+  }
+  &__value {
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    line-height: 30px;
+    width: 65px;
+    height: 30px;
+    text-align: center;
+    color: $color--green;
+    background-color: $color--light-green;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}

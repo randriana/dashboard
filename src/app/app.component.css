@@ -1,0 +1,80 @@
+/* COLOR */
+.card__container {
+  background-color: #fff;
+  width: 330px;
+  height: 70px;
+  border: 1px solid #EFEFEF;
+  padding: 30px;
+  margin-bottom: 50px;
+  position: relative; }
+
+.card__label {
+  display: block;
+  color: #72777a;
+  margin-bottom: 20px; }
+
+.card__icon {
+  display: inline-block;
+  float: left;
+  font-size: 28px;
+  color: #72777a; }
+
+.card__value {
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+  line-height: 30px;
+  width: 65px;
+  height: 30px;
+  text-align: center;
+  color: #4caf50;
+  background-color: #E5F3E6;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.modal__content {
+  width: 400px;
+  background-color: #fff;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  overflow-y: auto; }
+
+.modal__list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .modal__list__item {
+    border-bottom: 1px solid #EFEFEF;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; }
+
+.modal__button {
+  position: absolute;
+  top: 520px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .main__view {
+    background-color: #F9FAFB;
+    height: 100%;
+    width: 100%; }
+
+.navbar {
+  height: 60px;
+  border-bottom: 1px solid #EFEFEF; }

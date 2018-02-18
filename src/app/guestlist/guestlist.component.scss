@@ -1,0 +1,59 @@
+@import "../../sass/common";
+.table {
+  text-align: left;
+  color: $text--color;
+  width: 100%;
+  border-top: 1px solid $border--color;
+  &__container {
+    display: block;
+    margin: $main-view--margin-top auto 0;
+    border: 1px solid $border--color;
+    width: 90%;
+    background-color: #fff;
+    padding: 0 20px;
+  }
+  &__row {
+    display: block;
+    border-bottom: 1px solid $border--color;
+    padding: 5px 30px;
+    &--first {
+      border-bottom: 2px solid $border--color;
+      padding: 0 30px;
+      font-weight: bold;
+    }
+    &:hover {
+      background-color: darken(#fff, 3%);
+      cursor: pointer;
+    }
+  }
+  &__sub-row {
+    border-bottom: 1px solid $border--color;
+    padding: 5px 58px;
+    font-size: 14px;
+    .table__cell {
+      display: inline-block;
+      width: 220px;
+      height: 45px;
+      line-height: 45px;
+      color: lighten($text--color, 10%);
+      .red {
+        color: #F44336;
+      }
+      .green {
+        color: #4CAF50;
+      }
+      .yellow {
+        color: #FDD835;
+      }
+    }
+  }
+  &__cell {
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    &.name {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../sass/common";
+.main {
+  display: flex;
+
+  &__view {
+    background-color: $page--background-color;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.navbar {
+  height: 60px;
+  border-bottom: 1px solid #EFEFEF;
+}

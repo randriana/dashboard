@@ -1,0 +1,28 @@
+<div class="home__container">
+  <div class="card__container">
+    <span class="card__label">Antall bekreftede gjester</span>
+    <i class="material-icons card__icon">people</i>
+    <span class="card__value" (click)="showModal(1)">{{stats && stats.numberOfAttendies}}/{{stats && stats.numberOfGuests}}</span>
+  </div>
+  <div class="card__container">
+    <span class="card__label">Antall åpnede invitasjoner</span>
+    <i class="material-icons card__icon">drafts</i>
+    <span class="card__value" (click)="showModal(2)">{{stats && stats.openedInvitations}}/{{stats && stats.numberOfInvites}}</span>
+  </div>
+  <div class="card__container">
+    <span class="card__label">Antall RSVP</span>
+    <i class="material-icons card__icon">reply</i>
+    <span class="card__value" (click)="showModal(3)">{{stats && stats.answeredRsvp}}/{{stats && stats.numberOfInvites}}</span>
+  </div>
+</div>
+<div class="modal__container" *ngIf="openModal">
+  <div class="modal__content">
+    <ul class="modal__list">
+      <li class="modal__list__item" *ngFor="let item of data">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+  <button class="modal__button" (click)="closeModal()">Lukk</button>
+</div>
+

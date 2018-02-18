@@ -1,0 +1,35 @@
+<div class="table__container">
+  <h1>Gjesteliste</h1>
+  <div class="table">
+    <div class="table__row--first">
+      <div class="table__cell">Navn</div>
+      <div class="table__cell">Kommer</div>
+      <div class="table__cell">Kode</div>
+      <div class="table__cell">Har sendt inn svar</div>
+      <div class="table__cell">Har åpnet invitasjonen</div>
+    </div>
+    <div class="table__group" *ngFor="let guest of guestlist">
+      <div class="table__row" (click)="showSubRow(guest)">
+        <div class="table__cell name">{{guest.name}}</div>
+        <div class="table__cell">{{ guest | numberOfAttendants}}</div>
+        <div class="table__cell">{{guest.passcode}}</div>
+        <div class="table__cell">{{guest.answered ? "Ja" : "Nei"}}</div>
+        <div class="table__cell" >
+          <div *ngIf="guest.openedInvite"class="material-icons"><i class="material-icons">drafts</i></div>
+          <div *ngIf="!guest.openedInvite"class="material-icons"><i class="material-icons">mail</i></div>
+        </div>
+
+      </div>
+      <div class="table__sub-row-container" *ngIf="guest.showSubRow">
+        <div class="table__sub-row" *ngFor="let member of guest.members">
+          <div class="table__cell">{{member.name || "Ukjent"}}</div>
+          <div class="table__cell">
+            <div *ngIf="member.attending"class="material-icons green"><i class="material-icons">sentiment_very_satisfied</i></div>
+            <div *ngIf="member.attending === null"class="material-icons yellow"><i class="material-icons">sentiment_neutral</i></div>
+            <div *ngIf="member.attending === false"class="material-icons red"><i class="material-icons">sentiment_very_dissatisfied</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
